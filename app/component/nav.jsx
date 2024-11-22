@@ -121,6 +121,7 @@ export default function Nav ({ searchbox, small, settings }) {
 
                     <Link href="/" className="logo">
                         <img src="/media/image/public/logo1.png"/>
+                        
                     </Link>
 
                     {
