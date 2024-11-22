@@ -1,0 +1,153 @@
+
+.help-div{
+    --back-color: rgb(58, 64, 74);
+
+    .heading{
+        margin: auto;
+        background: var(--back-color);
+        height: 23rem;
+        main > div{ width: 31rem; }
+        h1{
+            font-size: 1.5rem; letter-spacing: .5px;
+            font-weight: normal; color: #fff;
+        }
+        p{
+            font-size: .75rem; letter-spacing: .5px; color: #ddd;
+            i{ font-style: normal; margin: 0 1rem 0 0; }
+            span{
+                font-size: .7rem; color: #b9b9b9; background: rgba(0, 0, 0, .2);
+                border-radius: .5rem; padding: .5rem 1rem; margin: 0 .25rem;
+            }
+        }
+        .p{
+            font-size: .8rem; color: #ddd; line-height: 170%; margin: 1rem auto 0;
+            text-align: center;
+        }
+        .search-input{
+            overflow: hidden; background: #FFF; padding: 0 .5rem;
+            border: 1px solid #ddd;
+            border-radius: .5rem; margin: 2.5rem auto 2rem;
+
+            span{
+                font-size: 1.2rem; color: #444; margin-top: 1px;
+                width: 2rem; height: 100%; background: #FFF;
+            }
+            input{
+                font-size: .9rem; color: #333; padding: .8rem .6rem;
+            }
+        }
+    }
+    svg {display: inline-block; position: absolute; top: 0; left: 0;}
+    .svg{fill: var(--back-color); position: static;}
+    .star-svg1{opacity: .1; filter: blur(1px); top: 4rem; left: 20rem;}
+    .star-svg2{opacity: .1; filter: blur(1px); top: 12rem; left: 8rem;}
+    .star-svg3{opacity: .1; filter: blur(.7px); top: 4rem; left: auto; right: 20rem;}
+    .star-svg4{opacity: .1; filter: blur(1px); top: 15rem; left: auto; right: 7rem;}
+    .star-svg5{opacity: .1; filter: blur(1px); top: 20rem; left: 50%;}
+    .star-svg6{opacity: .1; filter: blur(1px); top: 15rem; left: 20%;}
+    .star-svg7{opacity: .1; filter: blur(2px); top: 15rem; left: 70%;}
+    .star-svg8{opacity: .1; filter: blur(2px); top: 2rem; left: 40%;}
+}
+
+.feats{
+    margin: 4rem auto 4rem;
+
+    a{
+        width: 23.5%; border: 1px solid #ddd; transition: all .1s linear;
+        padding: 1.5rem; border-radius: .5rem; cursor: default; text-decoration: none;
+        
+        svg:not(.no-fill){
+            opacity: .8; transform: scale(.9);
+            width: 2.5rem; height: 2.5rem; border-radius: 50%;
+            fill: var(--site-color);
+        }
+        svg.no-fill{
+            width: 2.5rem; height: 2.5rem; border-radius: 50%;
+            stroke: var(--site-color); opacity: .8; transform: scale(.9);
+            path{ stroke: var(--site-color); }
+        }
+        p, span{
+            font-size: .95rem; color: rgb(58, 64, 74); font-weight: normal;
+            letter-spacing: .5px; text-align: center; width: 100%; margin: 1rem auto .5rem;
+            font-weight: bold;
+        }
+        span{
+            font-size: .75rem; color: #555; margin: 0; line-height: 160%;
+            font-weight: normal;
+        }
+        &:hover{
+            box-shadow: .1rem .1rem 1rem #7773;
+        }
+    }
+}
+
+.help-center{
+    h1, p{
+        @extend .full-width, .left-text;
+        direction: ltr; padding-right: 25%;
+        line-height: 150%; letter-spacing: .5px;
+        color: #222; font-weight: bold;
+        margin: .5rem 0; font-size: 1.5rem;
+    }
+    h1{
+        margin: 2.5rem auto 1.5rem;
+        &:first-child{ margin-top: 0; }
+    }
+    p{
+        font-size: .95rem; color: #333; font-weight: normal;
+        line-height: 170%;
+    }
+    a, span{
+        color: #777; margin: 0 .2rem;
+    }
+    a{
+        color: var(--site-color); text-decoration: underline;
+        &:hover{ color: var(--site-color-hover); }
+    }
+}
+
+@media (max-width: 800px) {
+    .shape{ max-width: 7rem; filter: blur(20px); }
+    .shape:nth-child(1){ left: 14rem; top: 2rem; }
+    .shape:nth-child(2){ top: 30rem; right: -1rem; max-width: 5rem; }
+    .contact-us, .help-div{
+        width: 100%;
+        p{ display: none; }
+        .form{
+            margin-top: 2.5rem; box-shadow: none;
+            > div{ flex-wrap: wrap; }
+            > div{
+                .input:nth-child(2){
+                    margin-top: 1.5rem;
+                }
+            }
+            .input, button{ min-width: 100%; }
+        }
+    }
+    .help-div{
+        .heading{
+            height: 17rem;
+            main > div{
+                width: 90%;
+            }
+            .input{
+                max-width: 90%;
+            }
+            p{ display: flex; i{ display: none; } }
+        }
+    }
+    .feats{
+        margin: 2rem auto;
+    }
+    .feats main{
+        flex-wrap: wrap;
+        a{
+            width: 100%; margin: .5rem auto
+        }
+    }
+    .help-center{
+        h1, p{
+            padding-right: 0;
+        }
+    }
+}

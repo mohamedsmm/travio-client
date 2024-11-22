@@ -1,0 +1,179 @@
+
+.se_header{
+    height: 28rem; overflow: hidden;
+
+    .name{
+        top: 0; left: 0; z-index: 99;
+        h1{
+            font-size: 3rem; color: var(--light-color1);
+            font-weight: bold; letter-spacing: 1px;
+        }
+    }
+    .image{
+        height: 125%;
+        width: 100%; min-height: 100%;
+        @extend .flex, .over-hide, .relative;
+        img{ width: 100%; height: 100%; }
+    }
+}
+
+.loc{
+    .descibe{
+        font-size: .9rem; color: #444; letter-spacing: .5px;
+        width: 80%; line-height: 180%; text-align: left;
+    }
+    .home-slider{
+        .swiper-wrapper{
+            justify-content: space-between;
+            .loc-card{
+                height: auto;
+                width: 32%; min-width: 20rem; background: var(--back); border: 1px solid var(--border);
+                box-shadow: var(--shadow); margin: 0 0 2rem; padding-bottom: 2rem;
+                border-radius: var(--border-radius); overflow: hidden;
+                h1{
+                    font-size: 1.1rem; padding: 1rem 0 0; text-overflow: ellipsis;
+                    line-height: 140%; height: 4.3rem; overflow: hidden;
+                }
+                h1, .p, .replys{ padding-left: 1rem; padding-right: 1rem; }
+                .image{
+                    height: 15rem; border-radius: 0;
+                }
+                &:hover{
+                    box-shadow: var(--shadow1);
+                    .image{ box-shadow: none; }
+                    h1{ text-decoration: none; }
+                }
+            }
+        }
+    }
+    .title{
+        font-size: 1.4rem; color: var(--color1);
+        margin: 0; padding: 0; font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .heading{
+        color: #333; font-weight: bold; font-size: 1.5rem;
+        padding: 0 0 1rem 0; letter-spacing: 1px;
+    }
+    hr{
+        width: 6rem; padding: 1px;
+        background: var(--site-color); margin: 0 auto 2rem; 
+    }
+    .hr{
+        margin: 1rem auto 4rem;
+        p, span, a{
+            font-size: .85rem; letter-spacing: .5px;
+            color: #888;
+        }
+    }
+}
+
+.destination{
+    margin: 2rem auto 4rem;
+
+    .loc{
+        background: rgb(236, 254, 250); padding: .1rem;
+    }
+    .buttons{
+        button{
+            margin: 0 auto 4rem; font-size: 1rem; font-weight: bold;
+            padding: 1rem; width: 20rem; cursor: pointer; letter-spacing: 1.5px;
+            color: var(--light-color1); background: var(--site-color);
+            border-radius: var(--border-radius); outline: none;
+            &:hover{ background: var(--site-color-hover); }
+        }
+    }
+    .title{
+        margin: .5rem auto .5rem;
+        font-size: 1.4rem; letter-spacing: .5px;
+    }
+    .destination-cards{
+        margin: auto;
+
+        .tour-card{
+            background: #fff;
+            width: 23.5%; margin: .5rem 1.2rem 1rem 0;
+        }
+    }
+}
+
+.destinations{
+    margin: 1rem auto 3rem;
+    .titles{
+        width: 100%; margin: 1rem auto 1rem; padding: 0 0 1rem 0;
+        flex-direction: column; border-bottom: 1px solid var(--border);
+        font-weight: normal;
+
+        p{
+            font-size: 1.3rem; color: #000; 
+            padding: .5rem 0 .7rem; margin: 0; text-align: left;
+        }
+        p:last-child{
+            font-size: .9rem; color: var(--color); padding: 0;
+            letter-spacing: .5px;
+        }
+    } 
+}
+
+.loca-button{
+    padding: .5rem;
+    margin: .5rem auto;
+    
+    a{
+        background: var(--site-color);
+        color: #fff; font-size: .9rem;
+        letter-spacing: .5px; border-radius: .5rem;
+        padding: 1rem 2rem;
+        
+        &:hover{
+            background: var(--site-color-hover);
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .loc{
+        .home-slider{
+            .swiper-wrapper{
+                .loc-card{ width: 48.5%; }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .loc{
+        .home-slider{
+            .swiper-wrapper{
+                .loc-card{ width: 100%; }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .destination-cards{
+        flex-wrap: wrap; display: flex;
+        justify-content: center; align-items: center;
+
+        .tour-card{
+            min-width: 90%;
+            margin: .5rem 0 1rem;
+
+            .image{
+                height: 14rem;
+            }
+            h1{
+                font-size: 1rem;
+            }
+        }
+    }
+    .se_header{
+        height: 17rem;
+        .name h1{ font-size: 2.5rem; }
+    }
+    .loc{
+        .descibe{ width: 95%; }
+        .hr{ display: none; }
+        hr{ width: 50%; margin: .5rem auto 2rem; }
+    }
+}

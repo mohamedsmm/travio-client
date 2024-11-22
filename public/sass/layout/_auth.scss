@@ -1,0 +1,213 @@
+
+.register-form, .login-form, .recovery-form, .reset-form{
+    margin: 2rem auto;
+    width: 28rem;
+    .image{ margin: auto; img{ width: 5rem; height: 5.2rem; } }
+    h1{ color: var(--color); font-size: 1.8rem; margin: .5rem auto 1rem; }
+    p{ color: var(--color); font-size: .9rem; margin: 0 auto 1rem; line-height: 140%; }
+    
+    .input{
+        background: rgba(0, 0, 0, .03); cursor: pointer;
+        margin: .6rem auto; padding: .5rem 1rem; border-radius: var(--border-radius);
+        box-shadow: 0 1px 0 0 var(--border);
+
+        *{ cursor: pointer; }
+        &:hover{ background: rgba(0, 0, 0, .07); }
+        input{
+            border: 0; padding: .5rem 0; margin: 0; width: 100%;
+            z-index: 2; background: none; font-size: .9rem;
+        }
+        label{
+            margin: 0; z-index: 1; font-size: .95rem; transition: all .2s linear;
+            left: 3rem; top: 1rem; color: var(--color);
+        }
+        i{ font-size: 1rem; color: var(--color); width: 1.8rem; text-align: left; margin: 0 1px; }
+        .small{ font-size: .9rem; }
+        .big{ font-size: 1.3rem; }
+
+        &.active1{
+            label{ top: -.5rem; left: .3rem; font-size: .8rem; color: var(--site-color-hover); background: var(--back); padding: 0 .2rem; }
+            i{ color: var(--site-color-hover); }
+            background: #FFF;
+            outline: 1px solid var(--site-color-hover);
+        }
+        &.active2{
+            label{ top: .2rem; left: 2.5rem; font-size: .7rem; color: var(--site-color-hover); padding: 0 .2rem; }
+            i{ color: var(--site-color-hover); }
+        }
+        &.error-input{
+            margin: 1rem auto 0;
+            outline: 1px solid var(--error);
+            label{ color: var(--error); }
+            i{ color: var(--error); }
+        }
+    }
+    input[type="submit"]{
+        padding: 1rem; width: 100%; margin: 1.2rem auto 0;
+        background: var(--link); color: var(--light-color1);
+        font-size: 1rem; cursor: pointer; border-radius: var(--border-radius);
+        &:hover{ opacity: .9; }
+    }
+    .confirm{
+        margin: 1.4rem auto .3rem; cursor: pointer; padding: 0 .1rem;
+
+        .checkbox{
+            width: 1.25rem; height: 1rem; outline: 1px solid var(--site-color-hover);
+            border-radius: .05rem; cursor: pointer; margin-top: .2rem;
+        }
+        span{
+            background: var(--site-color-hover);
+            width: 100%; height: 100%; display: none;
+            i{ font-size: .68rem; color:var(--light-color1); margin: .5px 0 0 1.1px; }
+        }
+        p{
+            line-height: 150%; text-align: left;
+            margin: 0 .7rem; color: var(--color); font-size: .85rem;
+            a{ 
+                color: var(--links); font-size: .85rem;
+                &:hover{ color: var(--links-hover); text-decoration: underline; } 
+            }
+        }
+        .active{
+            .checkbox{ outline-color: var(--site-color-hover); }
+            span{ display: flex }
+        }
+    }
+    .api-form{
+        p{
+            height: 1px; margin: 2rem auto 1.5rem;
+            background: var(--border);
+            span{
+                background: var(--back);
+                padding: 0 .5rem; font-size: .8rem;
+                margin-top: -1px; color: var(--color);
+            }
+        }
+        a{
+            border: 1px solid var(--border); width: 20%; border-radius: var(--border-radius);
+            img{ width: 1.6rem; height: 1.6rem; } padding: .6rem 0;
+            &:hover{ background: var(--hover); }
+        }
+        .links{
+            margin: .5rem auto;
+        }
+    }
+    .forget{
+        p{
+            font-size: .87rem; color: var(--color);
+            margin: 1.5rem auto; 
+            a{
+                color: var(--link);
+                font-size: .85rem; text-decoration: underline;
+                &:hover{ color: var(--link-hover); }
+            }
+        }
+    }
+    .warn{
+        margin: 1rem auto; width: 100%;
+        span{
+            top: -.4rem; left: 35%; color: var(--color);
+            font-size: .8rem; background: var(--back);
+            padding: 0 .3rem; font-weight: bold;
+        }
+        p{
+            padding: 1rem; font-size: .7rem; line-height: 145%; text-align: left;
+            color: var(--color); border: 1px solid var(--border); border-radius: var(--border-radius);
+        }
+    }
+    .active-error{
+        border-color: var(--error);
+    }
+    .error{
+        font-size: .75rem; color: var(--error);
+        margin: .4rem 0 0; padding: 0 .2rem;
+        i{ color: var(--error); margin: 0 .5rem 0 0; }
+    }
+    .login-faild, .register-faild, .recovery-faild{
+        color: var(--error); text-align: left;
+        font-size: .83rem; margin: 1rem auto 0;
+        line-height: 160%; letter-spacing: .5px;
+        i{ margin: .15rem .5rem 0 0; }
+    }
+    &.form2{
+        .form1-input{ display: none; }
+        .form2-input{ display: flex; }
+        .input{
+            i{ display: none; }
+            label{ display: none; }
+            background: none; padding: 0; margin: 0;
+            border: 0; box-shadow: none; cursor: default;
+
+            input{
+                color: var(--color1); border: 1px solid var(--border);
+                border-radius: .2rem; padding: .9rem 1rem; cursor: auto;
+                letter-spacing: .5px;
+                width: 100%; margin: 1.2rem auto 0; font-size: .9rem;
+
+                &:focus{ border-color: #666; }
+            }
+            &.active3{
+                input{ border: 1px solid var(--link); }
+            }
+            &.error-input{ border: 0; outline: 0; input{ border: 1px solid var(--error); } } 
+        }
+    }
+    &.login-form{
+        .api-form{ a{ width: 100%; margin: 0 .5rem; } }
+        .forget{
+            padding: .5rem .5rem 1rem;
+            p{ margin: 1rem auto 0;  }
+            p:last-child{ margin: 1.2rem auto .5rem; }
+        }
+    }
+    &.recovery-form, &.reset-form{
+        margin: 3rem auto 5rem;
+        .forget{ margin: .8rem auto 0; p{ margin: 1rem auto 0; a{ font-size: .9rem; } } }
+        .resend{
+            padding: 1.5rem 1rem; background: rgba(0, 0, 0, .03); margin: 1.5rem auto;
+            border-radius: .2rem; border: 1px solid rgba(0, 0, 0, .05);
+            p{ font-size: .9rem; margin: 0 auto .5rem; color: var(--color); }
+            span{ font-size: .9rem; color: var(--link); text-decoration: underline; &:hover{ color: var(--link-hover); } }
+        }
+        .back{
+            font-size: .95rem; padding: 1rem 0; background: var(--back);
+            border: 1px solid var(--link); color: var(--link);
+            border-radius: var(--border-radius);
+            &:hover{ background: var(--link); color: var(--light-color1); text-decoration: none; }
+        }
+    }
+    &.log-form, &.recovery-form{
+        .login-faild{
+            i{ margin-top: .2rem; }
+        }
+        .recovery-faild{
+            i{ margin-top: .2rem; }
+        }
+    }
+    &.reset-form{
+        &.faild, &.success{
+            .resend{
+                background: none; margin: auto; border: 0;
+                p{
+                    font-size: .9rem; margin: 0 auto 1.5rem;
+                    border: 1px solid var(--error); width: 6rem; height: 6rem;
+                    i{ font-size: 3.5rem; color: var(--error); }
+                    &.green{ border: 1px solid var(--success); i{ color: var(--success); } }
+                }
+                span{
+                    margin: 0 auto 1rem; padding: 0;
+                    font-size: .9rem; color: var(--error); cursor: default;
+                    text-decoration: none;
+                    &.green{ color: var(--color); }
+                }
+            }
+        }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+    }
+
+}
